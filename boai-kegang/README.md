@@ -43,4 +43,4 @@ Codex与WorkBuddy默认都安装[完整Skill包](releases/boai-kegang.zip?raw=tr
 
 ## 配置与迁移边界
 
-独立课纲已迁入本套件 boai-kegang 目录。写稿无需额外API Key；排版依赖见 delivery-pack/requirements-cloud.txt。这里的旧验证记录只描述原仓库；新仓库的云端排版尚待实际运行验证。用户资料默认保持在任务目录，公开Issue只允许提交已确认可公开的内容。
+独立课纲已迁入本套件 boai-kegang 目录。写稿无需额外API Key；排版依赖见 delivery-pack/requirements-cloud.txt。新仓库已于2026-11-02通过[云端排版验证](https://github.com/Captainf5/boai-course/actions/runs/41337742875)，手机真实下载与个人客户课纲另行验收。用户资料默认保持在任务目录，公开Issue只允许提交已确认可公开的内容。

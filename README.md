@@ -6,7 +6,7 @@
 
 **理念 → 调研 → 课纲 → 案例与教学数据 → 教学PPT → 授课复盘**
 
-[版本与验证边界](VERSIONS.md) · [通用工作周报PCR实战案例](examples/weekly-report-pcr.md) · [作者项目主页](https://github.com/Captainf5)
+[发布与验证记录](PUBLICATION.md) · [版本与验证边界](VERSIONS.md) · [通用工作周报PCR实战案例](examples/weekly-report-pcr.md) · [作者项目主页](https://github.com/Captainf5)
 
 GitHub源码与SkillHub上架分别验收；本页不表示SkillHub已上架。
 
