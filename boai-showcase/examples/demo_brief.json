@@ -1,0 +1,31 @@
+{
+  "case_name": "教学模拟：区域经营分析",
+  "case_type": "data",
+  "business_question": "哪个区域最值得管理层优先关注？",
+  "artifact": "区域经营Excel",
+  "benchmark_output": "经营会质询单",
+  "inputs": [
+    "经营Excel",
+    "数据字典"
+  ],
+  "rules": [
+    "毛利率口径"
+  ],
+  "evidence": [
+    "历史趋势"
+  ],
+  "conflict": "指标最差区域与影响最大区域不同",
+  "expected_output": "经营质询单",
+  "safety_boundaries": [
+    "脱敏"
+  ],
+  "data_dictionary": true,
+  "yoy_baseline": false,
+  "business_events": false,
+  "cost_parameters": false,
+  "reason_detail": false,
+  "file_types": [
+    "xlsx"
+  ],
+  "source": "纯教学模拟输入，无真实客户数据"
+}

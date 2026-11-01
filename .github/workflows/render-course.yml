@@ -1,0 +1,59 @@
+name: 手机课纲云端排版
+on:
+  workflow_dispatch:
+  issues:
+    types: [opened, edited]
+  push:
+    branches: [main]
+    paths:
+      - 'boai-kegang/outputs/*.md'
+      - 'boai-kegang/outputs/catalog/*.md'
+      - 'boai-kegang/delivery-pack/**'
+      - '.github/workflows/render-course.yml'
+permissions:
+  contents: read
+concurrency:
+  group: course-render-publish
+  cancel-in-progress: false
+defaults:
+  run:
+    working-directory: boai-kegang
+jobs:
+  render:
+    if: >-
+      github.event_name != 'issues' ||
+      (github.event.sender.login == github.repository_owner &&
+       github.event.issue.user.login == github.repository_owner &&
+       startsWith(github.event.issue.title, '[课纲排版]'))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install renderer
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends libreoffice-writer fonts-noto-cjk
+          python -m pip install -r delivery-pack/requirements-cloud.txt
+      - name: Run safety tests
+        run: python -m unittest discover -s tests -v
+      - name: Render owner-submitted Markdown
+        if: github.event_name == 'issues'
+        run: python delivery-pack/scripts/cloud_render.py --event "$GITHUB_EVENT_PATH"
+      - name: Render course catalog
+        if: github.event_name != 'issues'
+        run: python delivery-pack/scripts/render_catalog.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: course-render-${{ github.run_id }}
+          path: |
+            boai-kegang/outputs/**/*.md
+            boai-kegang/outputs/**/*.docx
+            boai-kegang/outputs/**/*.pdf
+            boai-kegang/render-result.json
+            boai-kegang/render-catalog.json
+          retention-days: 7

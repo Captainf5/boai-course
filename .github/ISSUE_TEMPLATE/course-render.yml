@@ -1,0 +1,25 @@
+name: 手机课纲排版
+description: 粘贴按博AI Skill生成的完整课纲，在云端生成Word和PDF
+title: "[课纲排版] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这是公开仓库。仅仓库所有者可以触发排版。
+        先在手机AI对话中使用本仓库Skill完成写稿，再把完整Markdown粘贴到下面。这里负责排版，不会调用模型替你写稿。
+        不要提交客户机密、真实员工资料、联系方式或密钥。文字会公开在Issue中，生成文件可在Actions下载，保留7天。
+  - type: textarea
+    id: markdown
+    attributes:
+      label: 课纲 Markdown
+      description: 从一级课程标题开始，保留完整章节、表格及模块内容。
+      placeholder: "# 课程名称"
+    validations:
+      required: true
+  - type: checkboxes
+    id: publish
+    attributes:
+      label: 发布确认
+      options:
+        - label: 我确认课纲不含客户机密或个人敏感信息，并同意公开课纲与生成文件。
+          required: true

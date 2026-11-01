@@ -1,0 +1,74 @@
+name: Skill package validation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'boai-kegang/SKILL.md'
+      - 'boai-kegang/WORKFLOW.md'
+      - 'boai-kegang/OUTPUT-FORMAT.md'
+      - 'boai-kegang/CHECKLIST.md'
+      - 'boai-kegang/EXAMPLES.md'
+      - 'boai-kegang/CROSS-PLATFORM.md'
+      - 'boai-kegang/MOBILE-WORKFLOW.md'
+      - 'boai-kegang/MOBILE-PARITY-TEST.md'
+      - 'boai-kegang/大展宏图方法论.md'
+      - 'boai-kegang/references/**'
+      - 'boai-kegang/outputs/**/*.md'
+      - 'boai-kegang/mobile/**'
+      - 'boai-kegang/releases/**'
+      - 'boai-kegang/agents/**'
+      - 'boai-kegang/VERSION'
+      - 'boai-kegang/delivery-pack/**'
+      - 'boai-kegang/delivery-pack/scripts/build_mobile_pack.py'
+      - 'boai-kegang/delivery-pack/scripts/build_skill_package.py'
+      - 'boai-kegang/delivery-pack/requirements-cloud.txt'
+      - 'boai-kegang/tests/**'
+      - '.github/workflows/validate-skill.yml'
+  pull_request:
+    paths:
+      - 'boai-kegang/SKILL.md'
+      - 'boai-kegang/WORKFLOW.md'
+      - 'boai-kegang/OUTPUT-FORMAT.md'
+      - 'boai-kegang/CHECKLIST.md'
+      - 'boai-kegang/EXAMPLES.md'
+      - 'boai-kegang/CROSS-PLATFORM.md'
+      - 'boai-kegang/MOBILE-WORKFLOW.md'
+      - 'boai-kegang/MOBILE-PARITY-TEST.md'
+      - 'boai-kegang/大展宏图方法论.md'
+      - 'boai-kegang/references/**'
+      - 'boai-kegang/outputs/**/*.md'
+      - 'boai-kegang/mobile/**'
+      - 'boai-kegang/releases/**'
+      - 'boai-kegang/agents/**'
+      - 'boai-kegang/VERSION'
+      - 'boai-kegang/delivery-pack/**'
+      - 'boai-kegang/delivery-pack/scripts/build_mobile_pack.py'
+      - 'boai-kegang/delivery-pack/scripts/build_skill_package.py'
+      - 'boai-kegang/delivery-pack/requirements-cloud.txt'
+      - 'boai-kegang/tests/**'
+      - '.github/workflows/validate-skill.yml'
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: boai-kegang
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install -r delivery-pack/requirements-cloud.txt
+      - name: Check generated mobile pack
+        run: python delivery-pack/scripts/build_mobile_pack.py --check
+      - name: Check portable Skill package
+        run: python delivery-pack/scripts/build_skill_package.py --check
+      - name: Run tests
+        run: python -m unittest discover -s tests -v

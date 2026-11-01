@@ -1,0 +1,6 @@
+interface:
+  display_name: "博AI课纲"
+  short_description: "以13份当前课程为基线，研发、定制并排版完整企业课纲，手机与电脑同标准"
+  default_prompt: "使用 $boai-kegang，先选择最接近的当前课程基线，再按我的对象、时长、场景和成果制作完整课纲并通过质量检查。"
+policy:
+  allow_implicit_invocation: true

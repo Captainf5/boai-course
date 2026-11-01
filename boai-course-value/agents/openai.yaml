@@ -1,0 +1,4 @@
+interface:
+  display_name: "boai course value · 博AI课程理念"
+  short_description: "用于博AI课程课前讨论与课后验收，检查用户需求和三少三多是否落实"
+  default_prompt: "请用 $boai-course-value 做课后验收，结合客户需求、授课材料、学员作品与反馈，判断课程方向是否偏离三少三多、大展宏图，列出证据和最必要的调整。"

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "博AI案例制作 Case Brief",
+  "type": "object",
+  "required": ["case_name", "business_question"],
+  "properties": {
+    "case_name": {"type": "string"},
+    "client": {"type": "string"},
+    "audience": {"type": "string"},
+    "case_type": {"enum": ["data", "nondata", "mixed", "unknown"]},
+    "business_question": {"type": "string"},
+    "role": {"type": "string"},
+    "frequency": {"type": "string"},
+    "current_time_cost": {"type": "string"},
+    "artifact": {"type": ["string", "array"]},
+    "benchmark_output": {"type": ["string", "array"]},
+    "inputs": {"type": "array", "items": {"type": "string"}},
+    "rules": {"type": "array", "items": {"type": "string"}},
+    "evidence": {"type": "array", "items": {"type": "string"}},
+    "real_result": {"type": ["string", "array", "null"]},
+    "conflict": {"type": ["string", "null"]},
+    "expected_output": {"type": ["string", "null"]},
+    "safety_boundaries": {"type": "array", "items": {"type": "string"}},
+    "data_dictionary": {"type": ["boolean", "null"]},
+    "yoy_baseline": {"type": ["boolean", "null"]},
+    "business_events": {"type": ["boolean", "null"]},
+    "cost_parameters": {"type": ["boolean", "null"]},
+    "reason_detail": {"type": ["boolean", "null"]},
+    "api_docs": {"type": ["boolean", "null"]},
+    "file_types": {"type": "array", "items": {"type": "string"}}
+  }
+}

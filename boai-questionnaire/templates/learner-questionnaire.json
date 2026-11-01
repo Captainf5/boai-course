@@ -1,0 +1,169 @@
+{
+  "schema_version": "learner-v1.2",
+  "audience": "learner",
+  "description": "问卷数据及资料严格保密，仅用于本次培训准备与分析。标的物是希望对标的优秀成品；输入资料是完成任务所需的原始材料。请勿提交密码、证件号等敏感个人信息或未经许可的资料。",
+  "questions": [
+    {
+      "key": "learner_name",
+      "title": "姓名",
+      "type": "text",
+      "required": false,
+      "description": "选填。"
+    },
+    {
+      "key": "department",
+      "title": "您所在的部门",
+      "type": "select",
+      "required": true,
+      "multiple": false,
+      "options": [
+        "综合管理／行政",
+        "人力资源／培训",
+        "财务／审计",
+        "销售／市场",
+        "研发／技术",
+        "运营／供应链",
+        "客服／服务支持",
+        "其他"
+      ],
+      "description": "选择最接近的一项。"
+    },
+    {
+      "key": "department_other",
+      "title": "请填写您的部门",
+      "type": "text",
+      "required": true,
+      "description": "填写具体部门名称。",
+      "visible_rule": {
+        "logic": "and",
+        "conditions": [
+          [
+            "您所在的部门",
+            "intersects",
+            [
+              "其他"
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "key": "ai_level",
+      "title": "您目前使用AI能完成哪些操作？",
+      "type": "select",
+      "required": true,
+      "multiple": false,
+      "options": [
+        "尚未使用：需要从基本操作开始",
+        "基础操作：能问答、搜索或简单写作",
+        "独立完成：能补充资料、调整提示词，做出可用文稿或分析",
+        "稳定复用：能用提示词、模板或Skill反复完成同类任务，并检查结果",
+        "自动化应用：能搭建并测试AI助手或自动化工作流"
+      ],
+      "description": "按自己实际完成过的最高水平选择。"
+    },
+    {
+      "key": "priority_task",
+      "title": "您最希望优先用AI改善哪类工作？",
+      "type": "select",
+      "required": true,
+      "multiple": false,
+      "options": [
+        "数据整理与分析",
+        "汇报与写材料",
+        "内容与对外表达",
+        "协同与流程",
+        "决策支持",
+        "其他或暂不清楚"
+      ],
+      "description": "选择最重要的一项。"
+    },
+    {
+      "key": "scenario",
+      "title": "请描述一个您希望用AI解决的工作任务",
+      "type": "text",
+      "required": true,
+      "description": "简述任务与难点、目前步骤和耗时、输入资料、期望成果与完成标准。已交资料注明位置即可。"
+    },
+    {
+      "key": "data_readiness",
+      "title": "这个任务的资料和数据目前是什么状态？",
+      "type": "select",
+      "required": true,
+      "multiple": false,
+      "options": [
+        "以人工或Excel为主",
+        "分散在多个系统或文件中",
+        "已集中但尚需整理",
+        "已整理且可提供获准使用的版本",
+        "暂不清楚或不适用"
+      ],
+      "description": "针对上一题的任务选择。"
+    },
+    {
+      "key": "process_readiness",
+      "title": "这个任务是否已有操作步骤或SOP？",
+      "type": "select",
+      "required": true,
+      "multiple": false,
+      "options": [
+        "基本没有",
+        "零散存在",
+        "较为完整",
+        "暂不清楚或不适用"
+      ],
+      "description": ""
+    },
+    {
+      "key": "benchmark",
+      "title": "有没有一份您希望对标的优秀成品？",
+      "type": "text",
+      "required": true,
+      "description": "写文件或链接、好在哪里、可用范围；已提供则注明位置，没有可填“暂无”。"
+    },
+    {
+      "key": "benchmark_attachment",
+      "title": "优秀成品或脱敏材料",
+      "type": "attachment",
+      "required": false,
+      "description": "选填。已有链接或已交材料，无需重复上传。"
+    },
+    {
+      "key": "safety_boundaries",
+      "title": "这个任务有哪些使用限制？",
+      "type": "text",
+      "required": true,
+      "description": "账号权限、敏感数据、文件修改、系统写回、对外发布等，写明允许或禁止事项；不清楚可填“待确认”。"
+    },
+    {
+      "key": "practice_conditions",
+      "title": "您参加实操时能使用的设备和软件条件有哪些？",
+      "type": "select",
+      "required": true,
+      "multiple": true,
+      "options": [
+        "Windows电脑",
+        "Mac电脑",
+        "麒麟系统电脑",
+        "统信UOS或其他Linux电脑",
+        "只能使用手机或平板",
+        "可下载安装客户端",
+        "公司不允许下载安装客户端",
+        "可使用浏览器网页版工具",
+        "只能使用公司内网或指定软件",
+        "暂不清楚",
+        "其他"
+      ],
+      "exclusive_options": [
+        "暂不清楚"
+      ],
+      "description": "可多选，按已确认的情况选择；“暂不清楚”单独选择。",
+      "incompatible_options": [
+        [
+          "可下载安装客户端",
+          "公司不允许下载安装客户端"
+        ]
+      ]
+    }
+  ]
+}

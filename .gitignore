@@ -1,0 +1,23 @@
+# OS files
+Thumbs.db
+.DS_Store
+
+# Editor files
+.idea/
+.vscode/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local runtime files
+*.log
+
+# Local validation outputs
+__pycache__/
+*.pyc
+**/benchmarks/_tmp_case.json
+
+# Local and historical material excluded from the public distribution
+/boai-kegang/reference-pack/
+/boai-kegang/outputs/posters/

@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "reference_basis": "outputs/catalog",
+  "courses": [
+    {
+      "id": "office-1d",
+      "family": "office-management",
+      "title": "【博AI增效-1D】10倍职场办公_6X畅销版",
+      "path": "outputs/catalog/博AI增效-1D-10倍职场办公_6X畅销版.md",
+      "sha256": "a87b4b40082cca91a42d3dd6ffcf83d80c9017b8a03406adda665ef707973309",
+      "duration": "1D",
+      "primary_tool": "WorkBuddy"
+    },
+    {
+      "id": "office-2d",
+      "family": "office-management",
+      "title": "【博AI增效-2D】10倍职场办公_6X畅销版",
+      "path": "outputs/catalog/博AI增效-2D-10倍职场办公_6X畅销版.md",
+      "sha256": "018f9e979365ae16b9db2c566a551541e1317af605c047cea1af45a7a6295be5",
+      "duration": "2D",
+      "primary_tool": "WorkBuddy"
+    },
+    {
+      "id": "data-1d",
+      "family": "office-management",
+      "title": "【博AI增效-1D】10倍职场办公_6X数据版",
+      "path": "outputs/catalog/博AI增效-1D-10倍职场办公_6X数据版.md",
+      "sha256": "4d784e7c996f4ea3e73128e22dabe9c69a39bfb358337faf8a384a84087cd7af",
+      "duration": "1D",
+      "primary_tool": "Excel"
+    },
+    {
+      "id": "executive-1d",
+      "family": "office-management",
+      "title": "【博AI增效-1D】面向管理者的AI增长进阶课_6X高管版",
+      "path": "outputs/catalog/博AI增效-1D-面向管理者的AI增长进阶课_6X高管版.md",
+      "sha256": "70e2a0570318bcd32ad3dcb89370728273bb711a0ae79a5dee634481c0c1a199",
+      "duration": "1D",
+      "primary_tool": "WorkBuddy"
+    },
+    {
+      "id": "feishu-1d",
+      "family": "office-management",
+      "title": "【博AI增效-1D】飞书AI实战课_6X飞书版",
+      "path": "outputs/catalog/博AI增效-1D-飞书AI实战课_6X飞书版.md",
+      "sha256": "8ad4a78ec0f695084d7b30a09879d96e90e200d78cc6f2a318ec17bdd65b66d4",
+      "duration": "1D",
+      "primary_tool": "飞书"
+    },
+    {
+      "id": "marketing-1d",
+      "family": "marketing-agent",
+      "title": "【博AI增效-1D】10倍AI营销引擎_6X极速版",
+      "path": "outputs/catalog/博AI增效-1D-10倍AI营销引擎_6X极速版.md",
+      "sha256": "39d5dfd87609c3b69d0be0301ef66b3ee2e7648e86b700dbfd8a65cd868920f2",
+      "duration": "1D",
+      "primary_tool": "即梦"
+    },
+    {
+      "id": "agent-1d",
+      "family": "marketing-agent",
+      "title": "【博AI增效-1D】10倍业务型智能体_6X极速版",
+      "path": "outputs/catalog/博AI增效-1D-10倍业务型智能体_6X极速版.md",
+      "sha256": "516adbb903fe645bba85e8fae5f0a1119e959253ca63a5638cb5979bc6f4acf8",
+      "duration": "1D",
+      "primary_tool": "扣子/WorkBuddy"
+    },
+    {
+      "id": "agent-2d",
+      "family": "marketing-agent",
+      "title": "【博AI增效-2D】10倍业务型智能体_6X进阶版",
+      "path": "outputs/catalog/博AI增效-2D-10倍业务型智能体_6X进阶版.md",
+      "sha256": "6fd8f20b54388c7deb140a7426d7bef5ec0f9e8775b0ff84895c3e86b37aaea4",
+      "duration": "2D",
+      "primary_tool": "扣子/WorkBuddy"
+    },
+    {
+      "id": "opc-half-day",
+      "family": "marketing-agent",
+      "title": "博AI增效-OPC实战工作坊",
+      "path": "outputs/catalog/博AI增效-OPC实战工作坊.md",
+      "sha256": "f11b1021ffe574b5a8d3eec047def9637fbfe9f0cd754af5366e4080ec1ac06f",
+      "duration": "0.5D",
+      "primary_tool": "OpenClaw"
+    },
+    {
+      "id": "power-grid-1d",
+      "family": "industry",
+      "title": "【博AI增效-1D】电网AI办公增效实战_6X垂直版",
+      "path": "outputs/catalog/博AI增效-1D-电网AI办公增效实战_6X垂直版.md",
+      "sha256": "2ec00ac3233d32c0f559bf30202bc818cfc53d0674ec4b5d2ac46742db48b066",
+      "duration": "1D",
+      "primary_tool": "WorkBuddy"
+    },
+    {
+      "id": "telecom-enterprise-1d",
+      "family": "industry",
+      "title": "【博AI增效-1D】通讯政企前端AI实战课_6X垂直版",
+      "path": "outputs/catalog/博AI增效-1D-通讯政企前端AI实战课_6X垂直版.md",
+      "sha256": "9c76bdea996c387498cf39875e190f06f97073c63a7213a00c35c33f59b26806",
+      "duration": "1D",
+      "primary_tool": "WorkBuddy"
+    },
+    {
+      "id": "telecom-grid-2d",
+      "family": "industry",
+      "title": "【博AI增效-2D】通讯网格营销AI实战工作坊_6X垂直版",
+      "path": "outputs/catalog/博AI增效-2D-通讯网格营销AI实战工作坊_6X垂直版.md",
+      "sha256": "c76858c4873983703017d423fe264c8eead94b283492d31e1f97e7d2a160c753",
+      "duration": "2D",
+      "primary_tool": "WorkBuddy"
+    },
+    {
+      "id": "telecom-token-2d",
+      "family": "industry",
+      "title": "【博AI增效-2D】通讯Token运营AI实战工作坊_6X垂直版",
+      "path": "outputs/catalog/博AI增效-2D-通讯Token运营AI实战工作坊_6X垂直版.md",
+      "sha256": "e82043cd2ee4b9827c9f37d351783b0d28b36bf6ca017e87ee9b0592df25b304",
+      "duration": "2D",
+      "primary_tool": "WorkBuddy"
+    }
+  ]
+}

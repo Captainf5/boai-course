@@ -1,0 +1,4 @@
+interface:
+  display_name: "博AI讲课录音复盘"
+  short_description: "依据讲课录音和逐字稿复盘教学，提炼案例、学员问题与下次改课动作"
+  default_prompt: "用 $boai-recording-review 复盘这份讲课材料，给出有证据的教学判断、案例候选和最重要的三项改进。"

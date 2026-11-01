@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+Thumbs.db
+
+# Generated delivery files
+*_带图.docx
+*.pdf
+
+# Reproducible local package staging
+dist/
+
+# Local self-improvement logs
+.learnings/

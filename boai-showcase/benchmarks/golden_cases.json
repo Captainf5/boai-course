@@ -1,0 +1,197 @@
+[
+  {
+    "name": "纯经营Excel",
+    "expected_type": "data",
+    "expected_gate": "READY_WITH_RISKS",
+    "brief": {
+      "case_name": "区域经营分析",
+      "case_type": "data",
+      "business_question": "哪个区域最值得管理层优先关注？",
+      "artifact": "区域经营Excel",
+      "benchmark_output": "经营会质询单",
+      "inputs": [
+        "经营Excel",
+        "数据字典"
+      ],
+      "rules": [
+        "毛利率口径"
+      ],
+      "evidence": [
+        "历史趋势"
+      ],
+      "conflict": "指标最差区域与影响最大区域不同",
+      "expected_output": "经营质询单",
+      "safety_boundaries": [
+        "脱敏"
+      ],
+      "data_dictionary": true,
+      "yoy_baseline": false,
+      "business_events": false,
+      "cost_parameters": false,
+      "reason_detail": false,
+      "file_types": [
+        "xlsx"
+      ]
+    }
+  },
+  {
+    "name": "客诉材料",
+    "expected_type": "nondata",
+    "expected_gate": "READY",
+    "brief": {
+      "case_name": "重大客诉",
+      "case_type": "nondata",
+      "business_question": "客户要求赔付但检测认为外伤，怎么处理？",
+      "artifact": "客户投诉函+检测报告",
+      "benchmark_output": "真实最终处理意见",
+      "inputs": [
+        "客户函",
+        "调查报告",
+        "检测报告"
+      ],
+      "rules": [
+        "客诉处理管理规定",
+        "双质保"
+      ],
+      "evidence": [
+        "现场照片",
+        "检测结果"
+      ],
+      "real_result": "最终处理意见",
+      "conflict": "客户主张与内部检测冲突",
+      "expected_output": "客诉决策辅助单",
+      "safety_boundaries": [
+        "对外回复需人工审批"
+      ],
+      "file_types": [
+        "docx",
+        "pdf"
+      ]
+    }
+  },
+  {
+    "name": "营销数据加复盘",
+    "expected_type": "mixed",
+    "expected_gate": "READY",
+    "brief": {
+      "case_name": "线上营销资源配置",
+      "case_type": "mixed",
+      "business_question": "预算不增加，钱怎么投收益最大？",
+      "artifact": "营销Excel+现有看板",
+      "benchmark_output": "真实运营复盘",
+      "inputs": [
+        "营销Excel",
+        "活动复盘PPT"
+      ],
+      "rules": [
+        "预算上限",
+        "ROI规则"
+      ],
+      "evidence": [
+        "活动事件日志",
+        "问题原因明细"
+      ],
+      "real_result": "下一周期投放结果",
+      "conflict": "CTR上涨但7日有效下降",
+      "expected_output": "营销资源配置建议",
+      "safety_boundaries": [
+        "用户数据脱敏"
+      ],
+      "data_dictionary": true,
+      "yoy_baseline": true,
+      "business_events": true,
+      "cost_parameters": true,
+      "reason_detail": true,
+      "file_types": [
+        "xlsx",
+        "pptx"
+      ]
+    }
+  },
+  {
+    "name": "缺标的物",
+    "expected_type": "nondata",
+    "expected_gate": "BLOCK",
+    "brief": {
+      "case_name": "招聘筛选",
+      "case_type": "nondata",
+      "business_question": "4个面试名额给谁？",
+      "inputs": [
+        "JD"
+      ],
+      "rules": [
+        "岗位要求"
+      ],
+      "evidence": [],
+      "conflict": "高背景低匹配",
+      "expected_output": "面试准备单",
+      "safety_boundaries": [
+        "不得基于敏感属性筛选"
+      ],
+      "file_types": [
+        "docx"
+      ]
+    }
+  },
+  {
+    "name": "Excel无字典",
+    "expected_type": "data",
+    "expected_gate": "READY_WITH_RISKS",
+    "brief": {
+      "case_name": "成本分析",
+      "case_type": "data",
+      "business_question": "哪个基地最值得追查？",
+      "artifact": "成本Excel",
+      "benchmark_output": "月度成本诊断",
+      "inputs": [
+        "成本Excel"
+      ],
+      "rules": [
+        "成本管理规则"
+      ],
+      "evidence": [
+        "基地背景"
+      ],
+      "conflict": "高成本不等于管理差",
+      "expected_output": "成本诊断单",
+      "safety_boundaries": [
+        "脱敏"
+      ],
+      "data_dictionary": false,
+      "file_types": [
+        "xlsx"
+      ]
+    }
+  },
+  {
+    "name": "会议纪要",
+    "expected_type": "nondata",
+    "expected_gate": "READY",
+    "brief": {
+      "case_name": "产品力研讨",
+      "case_type": "nondata",
+      "business_question": "会议到底形成了什么共识和下一步动作？",
+      "artifact": "原始会议转写",
+      "benchmark_output": "正式会议纪要",
+      "inputs": [
+        "会议转写",
+        "正式纪要"
+      ],
+      "rules": [
+        "最多选3个方向"
+      ],
+      "evidence": [
+        "发言记录"
+      ],
+      "conflict": "个人观点可能被总结成共识",
+      "expected_output": "行动决策单",
+      "safety_boundaries": [
+        "内部材料"
+      ],
+      "file_types": [
+        "docx",
+        "txt"
+      ]
+    }
+  }
+]
