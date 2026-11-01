@@ -1,0 +1,28 @@
+name: Course suite checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check seven Skill entries and public links
+        run: python tools/check_suite.py
+      - name: Questionnaire regression tests
+        run: python -m unittest discover -s boai-questionnaire/tests -v
+      - name: Recording adapter regression tests
+        run: python -m unittest discover -s boai-recording-review/tests -v
+      - name: Case package and benchmarks
+        run: |
+          python boai-showcase/scripts/validate_package.py
+          python boai-showcase/scripts/run_benchmarks.py
+      - name: Synthetic data invariants
+        run: python tools/check_teaching_data.py
