@@ -1,66 +1,89 @@
 # 博AI增效课程 Skill 套件
 
-为企业培训提供可分别安装、按任务组合使用的 Skill：从课程理念、课前调研与分析、课纲定制、案例开发、教学数据制作到 PPT 制作。每个目录维护自己的 `SKILL.md`、依赖和验证边界，不把所有规则拼成一个大 Skill。
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/readme/hero-mobile.png">
+  <img src="assets/readme/hero.png" alt="博派企业AI实操培训：让学员带着作品回到岗位。教学模拟周报中，已上传不等于已验收。" width="100%">
+</picture>
 
-课程设计七项Skill独立合集。先按下表选择任务，再安装对应完整目录。
+**从真实任务出发，把AI培训设计成有练习、有作品、有验收的工作实践。** 七项课程设计Skill，连接课前需求、课堂实操和课后改进。
 
-**理念 → 调研 → 课纲 → 案例与教学数据 → 教学PPT → 授课复盘**
+[看完整教学案例](examples/weekly-report-pcr.md) · [安装与使用指南](GUIDE.md) · [联系冯博](mailto:fengbo.football@foxmail.com)
 
-[发布与验证记录](PUBLICATION.md) · [版本与验证边界](VERSIONS.md) · [通用工作周报PCR实战案例](examples/weekly-report-pcr.md) · [作者项目主页](https://github.com/Captainf5)
+## 看一个案例，再理解我们怎么设计课
 
-GitHub源码与SkillHub上架分别验收；本页不表示SkillHub已上架。
+**任务：把零散工作记录，做成主管能据此决策的一页周报。**
 
-## 已纳入的 Skill
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/readme/case-mobile.png">
+  <img src="assets/readme/case.png" alt="教学模拟：W05台账写已完成，但E05验收记录缺少两份附件。正确结论是归档尚未通过验收，需补齐附件后复核。" width="100%">
+</picture>
 
-| Skill | 用途 | 安装入口 |
+学员要交出工作周报与证据核查表，再把方法固化成可复用流程。小组轮换操作、核查和主管角色，展示作品后继续修改。
+
+**现场验收：**是否发现事实冲突？是否引用证据？是否生成可用文件？是否遵守读写与发送权限？换一组资料还能否完成？
+
+[打开完整案例：材料、任务、教练说明与验收标准](examples/weekly-report-pcr.md)
+
+<sub>这是已公开的教学模拟草案，不是客户真实记录；未宣称已完成课堂试讲或所有工具的端到端实测。</sub>
+
+## 把抽象概念，变成看得见的操作
+
+![已有公开教学图：AI从委托到交付，资料、工具、权限和结果回流](boai-ppt/variants/codex/assets/compact-01.png)
+
+<sub>已有教学图示，用于展示课程的表达方式；风格参考来源与许可见 boai-ppt 对应说明。</sub>
+
+## 课前、课堂、课后，各有清晰的交付
+
+| 阶段 | 先回答的问题 | 可设计的交付物 |
 |---|---|---|
-| **boai-course-value · 博AI课程理念** | 课前讨论与课后验收；以用户需求及“三少三多，大展宏图”检查课程方向，重点用于个人课后复盘 | [Skill入口](boai-course-value/SKILL.md) |
-| **boai-questionnaire · 课前调研与分析** | 在年度飞书Base为每个客户独立创建学员问卷，每次确认姓名必填；回收后调用归藏PPT并按授权邮件交付 | [Skill入口](boai-questionnaire/SKILL.md) |
-| **boai-kegang · 博AI课纲** | 沿用13份课程基线，定制课纲并生成 Word/PDF，保留手机分包与云端排版 | [说明与完整包](boai-kegang/README.md) |
-| **boai-ppt · 博AI PPT工作室** | 逐页脚本、博AI品牌版式、PPT制作与批量修改 | [使用说明](boai-ppt/README.md) |
-| **boai-showcase · 课程案例制作** | 从业务材料开发学员版、教练版及可核验产物 | [使用说明](boai-showcase/README.md) |
-| **boai-zengxiao-data-case · 数据案例制作** | 合成标注为教学模拟的数据、埋点及双版本练习材料 | [使用说明](boai-zengxiao-data-case/README.md) |
-| **boai-recording-review · 讲课录音复盘** | 首次确认手动/API来源，定位具体课程与篇章，依据课程价值观复盘、提炼案例与改课；含Get笔记只读适配 | [Skill入口](boai-recording-review/SKILL.md) |
+| 课前 | 谁来学？要完成什么岗位任务？ | 学员调研、需求分析、定制课纲 |
+| 课堂 | 怎样动手？怎样发现并修正错误？ | 实操案例、练习材料、作品与验收清单 |
+| 课后 | 什么值得保留？下一次怎么改？ | 授课复盘、改进建议、可复用模板 |
 
-## 独立维护的技能
+具体范围根据客户需求、课时、材料与预算确定。
 
-| 项目 | 范围 |
+> 更少的概念、工具与技巧；更多的实操、作品与产出。  
+> **No tell, just show.**
+
+## 七项能力，按任务组合
+
+| 你需要做什么 | 使用哪个Skill |
 |---|---|
-| 数据分析4.0.1 | 供讲师和学员直接分析数据、学习操作，不纳入课程设计合集。 |
-| 提示词优化 | 供讲师和学员优化日常提示词；已有prompt-factory 2.0.0，独立发布，不以旧TODO草稿判断其完成度。 |
+| 了解学员基础与岗位需求，形成分析报告 | [课前问卷与分析](boai-questionnaire/SKILL.md) |
+| 把需求转成具体课纲与Word/PDF | [课纲定制](boai-kegang/README.md) |
+| 设计学员材料、教练说明与验收标准 | [业务案例制作](boai-showcase/README.md) |
+| 准备标注清楚的教学模拟数据 | [教学数据案例](boai-zengxiao-data-case/README.md) |
+| 将确认后的脚本做成教学课件 | [教学PPT](boai-ppt/README.md) |
+| 从授课录音中提炼案例与改课建议 | [讲课录音复盘](boai-recording-review/SKILL.md) |
+| 检查课程是否坚持用户导向、实操与产出 | [课程价值观](boai-course-value/SKILL.md) |
 
-讲课录音复盘1.1.0已完成一次真实Get笔记逐字稿复盘；不等于逐秒听审或课堂效果验证。个人来源配置与凭据不随包公开。
+## 安装：把需要的目录交给Agent
 
-## 安装与使用
+> 请安装 https://github.com/Captainf5/boai-course 中的 boai-kegang，保留完整配套文件，核对依赖，不覆盖我的个人配置和业务文件。
 
-把想安装的目录链接发给 Agent，例如：
+也可下载仓库，将选定的完整目录放入宿主Skill目录。不要只复制SKILL.md。[完整安装、自然语言用法与依赖说明](GUIDE.md)。
 
-> 请安装本套件中的 boai-kegang，完整保留所需 references、scripts 和 assets，先说明依赖与未验证项。仓库地址：https://github.com/Captainf5/boai-course 。安装前核对依赖，不覆盖我已有的个人配置和业务文件。
+<details>
+<summary>使用前：账号、数据、版本与验证边界</summary>
 
-也可以下载仓库，将选定的完整目录放入宿主的 Skill 目录。课纲优先使用目录内 README 链接的完整 ZIP；不要只复制 `SKILL.md`。命令安装尚未实测，不提供未经验证的安装命令。
+Skill源码公开不等于所有外部服务已接通。飞书、邮件、录音接口和模型能力依赖使用者自己的授权；客户原件、邮箱配置和凭据不随安装包提供。真实客户项目的端到端验收范围，以各项说明为准。
 
-自然语言示例：
-- 用 boai-course-value 审阅这份课纲，删减非必要概念与工具，明确团队作品、展示反馈和验收方式。
-- 帮我给某甲方做一个课前调研；问卷回收后用 boai-questionnaire 分析、制作归藏PPT并邮件交付。
-- 用 boai-kegang，基于现有课程模板定制一天的办公增效课纲。
-- 用 boai-ppt，把确认后的逐页脚本制作成博AI红白PPT。
-- 用 boai-showcase，根据我提供的业务材料设计学员版和教练版案例。
-- 用 boai-zengxiao-data-case，制作明确标注为教学模拟的数据分析练习。
+通用数据分析属于独立的 [bobo-data-analysis](https://github.com/Captainf5/bobo-data-analysis)，不混入课程设计套件。问卷分析调用的归藏PPT与教学课件制作分开。
 
-## 依赖与数据边界
+[完整使用指南](GUIDE.md) · [版本与验证边界](VERSIONS.md) · [发布验证](PUBLICATION.md) · [历史迁移](MIGRATION.md)
 
-套件不要求填写统一 API Key。实际调用模型、图像工具和连接器取决于宿主现有授权；工具可能将用户提交的材料发送到对应服务，应按任务授权和客户数据边界使用。客户原件不随安装包公开。
+GitHub发布与SkillHub上架分别验收；本页不表示SkillHub已上架，也不承诺课堂业务效果。
 
-课纲 Word 排版使用 Python 与 python-docx；云端 PDF 排版依赖 LibreOffice。PPT入口按宿主选择两套已有实现，WorkBuddy实现优先slidep，Codex实现使用宿主演示文稿工具；两者不承诺视觉行为完全等效。数据案例脚本使用 Python、pandas、numpy、openpyxl。详见各目录说明。
+</details>
 
-问卷Skill单独使用归藏`guizang-ppt-skill`，依赖已授权飞书与邮件能力；公开包不携带个人邮箱、飞书坐标或授权凭据。年度路由、独立项目与结构化分析脚本已测试，真实客户回收→归藏成稿→邮件发送的完整闭环仍需首次客户项目验收。
+## 说一个你们想解决的工作问题
 
-## 合集边界
+来信说明：**团队与岗位、希望完成的任务、理想产物、学员人数与基础、预计培训时间**。我们据此讨论课程范围和准备材料。
 
-本仓库仅维护课程设计、备课和教学复盘相关 Skill。通用 Agent 工具、学员日常数据分析及提示词优化独立维护。归藏 PPT 是问卷分析所调用的外部依赖，与教学课件 boai-ppt 分开。
+**商务联系：[fengbo.football@foxmail.com](mailto:fengbo.football@foxmail.com)**
 
-## 维护与验证
+首次沟通不需要提供密码、账号凭据或未经批准外传的业务资料。
 
-原 `bopai_kegang` 课纲以 `boai-kegang/` 纳入本套件；迁移来源与验收范围见 [MIGRATION.md](MIGRATION.md)。独立旧仓库保留历史，本套件完成云端验证前不宣称旧端点已停用。
+[返回冯博的项目主页](https://github.com/Captainf5)
 
-仓库源码纳入不等同 SkillHub 上架或真实课堂效果验收。七项均提供完整源码入口；真实运行、跨端效果及外部账号授权以各项说明为准。
+<sub>页面设计方法参考 [花叔 huashu-design](https://github.com/alchaincyf/huashu-design)。页面内容与教学案例来自博派；示例不作为客户效果承诺。</sub>
